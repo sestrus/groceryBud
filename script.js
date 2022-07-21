@@ -62,9 +62,11 @@ submitButton.addEventListener("click", () => {
     const newInput = document.createElement("input");
     newInput.setAttribute("type", "text");
     newInput.setAttribute("id", "grocery" + parentId);
-    newInput.setAttribute("placeholder", textInput.value)
+    newInput.setAttribute("placeholder", "Edit Item")
+    newInput.setAttribute("class", "edit-input")
     groceryArticle.insertBefore(newInput, newEdit)
     newEdit.classList.add("hidden")
+    newInput.focus()
     //groceryArticle.appendChild(newInput)
     newInput.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
