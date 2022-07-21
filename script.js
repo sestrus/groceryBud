@@ -63,7 +63,9 @@ submitButton.addEventListener("click", () => {
     newInput.setAttribute("type", "text");
     newInput.setAttribute("id", "grocery" + parentId);
     newInput.setAttribute("placeholder", textInput.value)
-    groceryArticle.appendChild(newInput)
+    groceryArticle.insertBefore(newInput, newEdit)
+    newEdit.classList.add("hidden")
+    //groceryArticle.appendChild(newInput)
     newInput.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
         console.log("e no dziala lol")
@@ -71,7 +73,14 @@ submitButton.addEventListener("click", () => {
         console.log(editedValue)
         document.getElementById("p1" + parentId).innerHTML = editedValue
         newInput.remove();
+        newEdit.classList.remove("hidden")
       }
+      newInput.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          newInput.remove();
+          newEdit.classList.remove("hidden")
+        }
+      })
     })
   })
   //const createElement2 = (type, attrType, parent, attrName, idElem, textElem, target) => {

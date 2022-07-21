@@ -57,6 +57,10 @@ body {
 }
 
 
+.edit-btn {
+  margin: 1rem;
+
+}
 
 .delete-btn {
   margin: 1rem;
