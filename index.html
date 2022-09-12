@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" href="favicon.jpg" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -11,7 +12,14 @@
   <body>
     <div class="mainPage">
       <section class="section-center">
-        <form class="grocery-form">
+        <script>
+          var submitHandler = function () {
+            // do stuff
+            return false;
+          };
+        </script>
+
+        <form onsubmit="return submitHandler()" class="grocery-form">
           <h1 id="mainHeader">Grocery Bud</h1>
           <div class="form-control">
             <input type="text" maxlength="23" class="main-input" id="grocery" />

@@ -45,7 +45,6 @@ submitButton.addEventListener("click", () => {
     i = i + 1;
 
     const parentId = groceryArticle.id;
-    console.log(parentId);
 
     const eachParagraph = createParagraph(
       "p",
@@ -77,9 +76,7 @@ submitButton.addEventListener("click", () => {
       //groceryArticle.appendChild(newInput)
       newInput.addEventListener("keydown", (e) => {
         if (e.key === "Enter") {
-          console.log("e no dziala lol");
           editedValue = newInput.value;
-          console.log(editedValue);
           document.getElementById("p1" + parentId).innerHTML = editedValue;
           newInput.remove();
           newEdit.classList.remove("hidden");
